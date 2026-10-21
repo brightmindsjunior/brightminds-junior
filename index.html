@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BrightMinds Junior offers personalized online tuition, worksheets, notes and learning resources for school students.">
+  <meta name="theme-color" content="#173c68">
+  <title>BrightMinds Junior | Learn Today • Grow Tomorrow</title>
+  <style>
+    :root{--navy:#173c68;--blue:#2e6db4;--sky:#eaf4ff;--yellow:#ffd166;--ink:#17283d;--muted:#607086;--paper:#fff;--line:#dce6f0;--green:#16845b}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#f7faff;line-height:1.6}
+    a{color:inherit} .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:5;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:850;color:var(--navy);line-height:1.1}
+    .logo{width:44px;height:44px;border-radius:14px;background:var(--yellow);display:grid;place-items:center;font-size:24px}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:600;margin-top:4px}
+    nav{display:flex;gap:18px;align-items:center}nav a{text-decoration:none;font-size:14px;font-weight:700;color:#354c66}nav a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:12px 17px;background:var(--navy);color:#fff;text-decoration:none;font-weight:800;cursor:pointer;box-shadow:0 6px 16px #173c681c}
+    .btn.yellow{background:var(--yellow);color:var(--navy)}.btn.outline{background:#fff;color:var(--navy);border:1px solid var(--line);box-shadow:none}
+    .hero{padding:58px 0 48px;background:radial-gradient(circle at 90% 20%,#d8ebff 0,transparent 32%),linear-gradient(135deg,#f4f9ff,#fff9e9)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:35px}.eyebrow{display:inline-block;background:#e2f0ff;color:var(--blue);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:900;padding:7px 11px;border-radius:99px}
+    h1{font-size:clamp(36px,5.5vw,62px);line-height:1.08;letter-spacing:-.04em;color:var(--navy);margin:16px 0}h1 span{color:#d28b00}
+    .lead{font-size:18px;color:#52657b;max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
+    .hero-art{background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 20px 55px #173c6812;position:relative}
+    .book-stack{height:190px;display:grid;place-items:center;background:linear-gradient(145deg,#eaf4ff,#fff4d7);border-radius:20px;font-size:90px}
+    .floating{display:inline-block;background:#fff;padding:10px 14px;border:1px solid var(--line);border-radius:13px;font-weight:800;color:var(--navy);box-shadow:0 7px 18px #173c6810;margin-top:12px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.stat{background:#fff;border:1px solid var(--line);padding:13px;border-radius:15px}.stat b{display:block;color:var(--navy);font-size:17px}.stat span{font-size:12px;color:var(--muted)}
+    section{padding:58px 0}.section-head{text-align:center;max-width:680px;margin:0 auto 30px}.section-head h2{font-size:clamp(27px,4vw,39px);line-height:1.15;color:var(--navy);margin:0 0 10px;letter-spacing:-.025em}.section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:23px;box-shadow:0 8px 24px #173c6808}.card .icon{font-size:29px}.card h3{color:var(--navy);margin:10px 0 6px}.card p{margin:0;color:var(--muted);font-size:14px}.tag{display:inline-block;background:#eef6ff;color:#245b93;padding:5px 9px;border-radius:8px;font-size:12px;font-weight:800;margin:4px 4px 0 0}
+    .subjects{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}.subject{background:#fff;border:1px solid var(--line);padding:10px 14px;border-radius:99px;font-size:14px;font-weight:750}
+    .resource-card{display:flex;flex-direction:column;gap:12px}.resource-card .btn{margin-top:auto}.resource-top{display:flex;align-items:center;gap:12px}.file-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:#fff1c7;font-size:24px}
+    .notice{font-size:12px;color:var(--muted);background:#f0f6fc;border-radius:12px;padding:12px}
+    .fee-band{background:var(--navy);color:white;border-radius:24px;padding:30px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.fee-band h2{margin:0 0 6px;font-size:28px}.fee-band p{margin:0;color:#d9e8f8}.fee{font-size:28px;font-weight:900;color:var(--yellow);white-space:nowrap}
+    .steps{counter-reset:step}.step{display:flex;gap:14px}.step-number{flex:0 0 38px;height:38px;display:grid;place-items:center;border-radius:12px;background:var(--yellow);color:var(--navy);font-weight:900}
+    .contact{background:linear-gradient(135deg,#e8f4ff,#fff6d9)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px;align-items:start}.contact-box{background:#fff;border:1px solid var(--line);padding:25px;border-radius:22px}
+    label{font-weight:750;font-size:13px;display:block;margin:12px 0 5px}input,select,textarea{width:100%;padding:12px;border:1px solid #cdd9e6;border-radius:10px;font:inherit;background:#fff}textarea{min-height:100px;resize:vertical}.form-note{font-size:12px;color:var(--muted)}
+    footer{background:#102e50;color:#dce8f5;padding:30px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-links{display:flex;gap:15px;flex-wrap:wrap}.footer-links a{font-size:13px;color:#dce8f5}
+    .whatsapp-float{position:fixed;bottom:18px;right:18px;z-index:6;background:#16845b;color:#fff;text-decoration:none;border-radius:99px;padding:13px 17px;font-weight:900;box-shadow:0 8px 25px #0002}
+    @media(max-width:800px){nav{display:none}.hero-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:38px 0}.hero-art{max-width:520px}.grid{grid-template-columns:repeat(2,1fr)}.fee-band{grid-template-columns:1fr}.fee{font-size:24px}}
+    @media(max-width:520px){section{padding:42px 0}.grid{grid-template-columns:1fr}.stats{gap:7px}.stat{padding:10px}.stat b{font-size:15px}.stat span{font-size:11px}.hero-art{padding:16px}.book-stack{height:145px;font-size:70px}.whatsapp-float{right:12px;bottom:12px;padding:11px 14px}.actions .btn{width:100%}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="logo">🎓</span><span>BrightMinds Junior<small>Learn Today • Grow Tomorrow</small></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#tuition">Online Tuition</a><a href="#resources">Worksheets & PDFs</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Enquire Now</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Personalized learning for young minds</span>
+        <h1>Helping students <span>learn with confidence.</span></h1>
+        <p class="lead">Friendly one-to-one online tuition, engaging worksheets and clear study notes to help children understand concepts step by step.</p>
+        <div class="actions"><a class="btn yellow" href="#tuition">Explore Classes <span>→</span></a><a class="btn outline" href="#contact">Request a Demo</a></div>
+        <div class="stats"><div class="stat"><b>1-to-1</b><span>Personal attention</span></div><div class="stat"><b>Nursery–8</b><span>Learning resources</span></div><div class="stat"><b>Online</b><span>Learn from anywhere</span></div></div>
+      </div>
+      <div class="hero-art">
+        <div class="book-stack" aria-label="Books and learning illustration">📚✏️</div>
+        <div class="floating">🌟 Learn at your own pace</div>
+        <div class="floating" style="float:right">🧠 Build strong concepts</div>
+        <p style="clear:both;color:#607086;font-size:14px;margin:22px 4px 0">A supportive learning space where questions are welcome and progress matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tuition">
+    <div class="wrap">
+      <div class="section-head"><h2>Online Tuition That Fits Your Child</h2><p>Personalized live classes designed around each student's learning level, questions and goals.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">👩‍🏫</div><h3>One-to-One Classes</h3><p>Individual attention, concept explanations and guided practice in a friendly online setting.</p></article>
+        <article class="card"><div class="icon">🧩</div><h3>Learn Step by Step</h3><p>Simple explanations, examples from everyday life, worksheets and doubt-clearing support.</p></article>
+        <article class="card"><div class="icon">📈</div><h3>Practice & Progress</h3><p>Regular practice tasks, revision and assessments to help identify what needs more attention.</p></article>
+      </div>
+      <div style="margin-top:25px;text-align:center"><h3 style="color:#173c68">Subjects & Learning Areas</h3><div class="subjects">
+        <span class="subject">Mathematics</span><span class="subject">Science</span><span class="subject">EVS</span><span class="subject">English</span><span class="subject">Hindi</span><span class="subject">GK</span><span class="subject">Communication Skills</span><span class="subject">AI Basics</span>
+      </div></div>
+      <div class="fee-band" style="margin-top:30px"><div><h2>Personalized learning, one student at a time</h2><p>Ask about available timings, subjects, class plans and a demo session.</p></div><div><div class="fee">Tuition from ₹1,000*</div><a class="btn yellow" href="#contact" style="margin-top:10px">Ask About Fees</a></div></div>
+      <p class="form-note">*Starting fee shown as an editable example based on your current advertised fee. Confirm the duration, schedule and inclusions with parents before enrolment.</p>
+    </div>
+  </section>
+
+  <section id="resources" style="background:#eef6ff">
+    <div class="wrap">
+      <div class="section-head"><h2>Worksheets, Notes & Study PDFs</h2><p>Find practice resources by class and subject. Add your own PDF links to these cards when you're ready.</p></div>
+      <div class="grid">
+        <article class="card resource-card"><div class="resource-top"><div class="file-icon">📝</div><div><h3 style="margin:0">Free Worksheets</h3><span class="tag">FREE</span></div></div><p>Practice questions for Maths, English, Science and more.</p><a class="btn outline resource-link" href="#contact" data-resource="Free worksheets">Get worksheets</a></article>
+        <article class="card resource-card"><div class="resource-top"><div class="file-icon">📘</div><div><h3 style="margin:0">Chapter Notes</h3><span class="tag">STUDY NOTES</span></div></div><p>Easy-to-understand notes, definitions, examples and revision points.</p><a class="btn outline resource-link" href="#contact" data-resource="Chapter notes">Ask for notes</a></article>
+        <article class="card resource-card"><div class="resource-top"><div class="file-icon">⭐</div><div><h3 style="margin:0">Premium PDF Packs</h3><span class="tag">PAID RESOURCES</span></div></div><p>Structured chapter packs, practice sets and answer keys. Payment checkout can be added later.</p><a class="btn resource-link" href="#contact" data-resource="Premium PDF packs">Enquire to purchase</a></article>
+      </div>
+      <div class="notice" style="margin-top:18px"><strong>For the website owner:</strong> these are starter resource cards, not actual PDF downloads yet. Replace each button with a link to your real PDF or resource page before publishing. Do not upload paid PDFs to a public folder if you need to restrict access.</div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><h2>Why BrightMinds Junior?</h2><p>Learning should be clear, engaging and encouraging. Our goal is to help children strengthen concepts while developing confidence.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">💛</div><h3>Supportive Teaching</h3><p>Children can ask questions freely and learn without feeling rushed.</p></article>
+        <article class="card"><div class="icon">📚</div><h3>Helpful Resources</h3><p>Worksheets, practice material and revision support to reinforce learning.</p></article>
+        <article class="card"><div class="icon">🌍</div><h3>Learn From Anywhere</h3><p>Online learning makes it possible to connect with students across cities and countries.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow">Let's get started</span><h2 style="font-size:clamp(30px,4vw,42px);color:#173c68;line-height:1.1;margin:15px 0">Tell us what your child needs.</h2>
+        <p style="color:#52657b">Send an inquiry for online tuition, a demo class, worksheets or premium study materials. The form opens WhatsApp with your message ready to send.</p>
+        <div class="card steps" style="margin-top:20px">
+          <div class="step"><div class="step-number">1</div><div><strong>Share your details</strong><p>Tell us the class, subject and learning goals.</p></div></div>
+          <div class="step" style="margin-top:15px"><div class="step-number">2</div><div><strong>Discuss a suitable plan</strong><p>Confirm timing, fees and learning needs directly.</p></div></div>
+          <div class="step" style="margin-top:15px"><div class="step-number">3</div><div><strong>Begin learning</strong><p>Arrange a demo and decide the next steps together.</p></div></div>
+        </div>
+      </div>
+      <form class="contact-box" id="inquiryForm">
+        <h3 style="margin:0;color:#173c68">Parent / Student Inquiry</h3>
+        <label for="parent">Parent or student name *</label><input id="parent" name="parent" required placeholder="Your name">
+        <label for="grade">Student's class / grade *</label><select id="grade" name="grade" required><option value="">Choose a class</option><option>Nursery / Kindergarten</option><option>Class 1–4</option><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Other / International curriculum</option></select>
+        <label for="need">What are you interested in? *</label><select id="need" name="need" required><option value="">Choose an option</option><option>One-to-one online tuition</option><option>Demo class</option><option>Free worksheets</option><option>Chapter notes</option><option>Premium PDF packs</option></select>
+        <label for="subject">Subject or topic</label><input id="subject" name="subject" placeholder="e.g. Maths, Ecosystem, English">
+        <label for="message">Additional details</label><textarea id="message" name="message" placeholder="Learning goals, preferred timings, curriculum, or questions"></textarea>
+        <button class="btn" type="submit" style="width:100%;margin-top:16px">Send Inquiry on WhatsApp ↗</button>
+        <p class="form-note">Your message will open in WhatsApp. Review it and press Send there.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div><strong style="font-size:17px">BrightMinds Junior</strong><div style="font-size:13px">Learn Today • Grow Tomorrow</div><div style="font-size:12px;color:#afc5dc;margin-top:5px">Personalized learning for young minds.</div></div>
+    <div class="footer-links"><a id="instagramLink" href="https://www.instagram.com/brightmindsjunior/" target="_blank" rel="noopener">Instagram</a><a href="#tuition">Online Tuition</a><a href="#resources">Study Resources</a><a href="#contact">Contact</a></div>
+    <div style="font-size:12px;color:#afc5dc">© <span id="year"></span> BrightMinds Junior</div>
+  </div>
+</footer>
+<a class="whatsapp-float" id="whatsappFloat" href="#" target="_blank" rel="noopener" aria-label="Contact BrightMinds Junior on WhatsApp">☏ WhatsApp</a>
+<script>
+  // IMPORTANT: Update these two settings before publishing.
+  const WHATSAPP_NUMBER = "917869147295"; // country code + number, digits only
+  const INSTAGRAM_URL = "https://www.instagram.com/brightmindsjunior/";
+
+  const waBase = "https://wa.me/" + WHATSAPP_NUMBER;
+  document.getElementById("whatsappFloat").href = waBase + "?text=" + encodeURIComponent("Hello BrightMinds Junior! I would like to know more about your online tuition and learning resources.");
+  document.getElementById("instagramLink").href = INSTAGRAM_URL;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.querySelectorAll(".resource-link").forEach(link => {
+    link.addEventListener("click", () => {
+      const field = document.getElementById("need");
+      const resource = link.dataset.resource;
+      if (resource && field) {
+        const option = Array.from(field.options).find(o => o.text.toLowerCase().includes(resource.toLowerCase().split(" ")[0]));
+        if (option) field.value = option.value;
+      }
+    });
+  });
+
+  document.getElementById("inquiryForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const data = new FormData(this);
+    const message = [
+      "Hello BrightMinds Junior! I'd like to make an inquiry.",
+      "",
+      "Name: " + data.get("parent"),
+      "Student's class: " + data.get("grade"),
+      "Interested in: " + data.get("need"),
+      "Subject/topic: " + (data.get("subject") || "Not specified"),
+      "Additional details: " + (data.get("message") || "Not specified")
+    ].join("\n");
+    window.open(waBase + "?text=" + encodeURIComponent(message), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>
