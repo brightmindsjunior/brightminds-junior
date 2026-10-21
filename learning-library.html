@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse BrightMinds Junior worksheets, notes and PDF learning resources by class and subject.">
+  <title>Learning Library | BrightMinds Junior</title>
+  <style>
+    :root {
+      --navy: #173c68;
+      --blue: #2e6db4;
+      --pale-blue: #eef6ff;
+      --yellow: #ffd166;
+      --ink: #17283d;
+      --muted: #607086;
+      --line: #dce6f0;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: #f7faff;
+      line-height: 1.6;
+    }
+    a { color: var(--blue); }
+    .wrap { width: min(1100px, 92%); margin: 0 auto; }
+    header { background: var(--white); border-bottom: 1px solid var(--line); }
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 16px 0;
+    }
+    .brand { color: var(--navy); font-size: 20px; font-weight: 850; text-decoration: none; }
+    .brand small { display: block; color: var(--muted); font-size: 11px; font-weight: 600; }
+    nav { display: flex; flex-wrap: wrap; gap: 15px; }
+    nav a { color: var(--navy); font-size: 14px; font-weight: 700; text-decoration: none; }
+    .hero { background: linear-gradient(135deg, var(--pale-blue), #fff8e7); padding: 38px 0; }
+    .eyebrow { color: var(--blue); text-transform: uppercase; font-size: 12px; letter-spacing: .08em; font-weight: 900; }
+    h1 { color: var(--navy); font-size: clamp(30px, 5vw, 46px); line-height: 1.1; margin: 10px 0; }
+    .intro { color: var(--muted); max-width: 720px; margin-bottom: 0; }
+    main { padding: 32px 0 55px; }
+    .filters {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px; background: var(--white); padding: 18px;
+      border: 1px solid var(--line); border-radius: 18px; margin-bottom: 22px;
+    }
+    label { display: block; font-size: 13px; font-weight: 800; margin-bottom: 6px; }
+    select, input {
+      width: 100%; padding: 11px 12px; border: 1px solid #cbd8e6;
+      border-radius: 10px; font: inherit; background: white; color: var(--ink);
+    }
+    .summary { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin: 18px 0 12px; }
+    .summary h2 { color: var(--navy); font-size: 23px; margin: 0; }
+    #count { color: var(--muted); font-size: 13px; }
+    .resource-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .resource {
+      background: var(--white); border: 1px solid var(--line); border-radius: 17px;
+      padding: 18px; display: flex; flex-direction: column; min-height: 245px;
+      box-shadow: 0 7px 20px #173c6808;
+    }
+    .resource-icon { font-size: 27px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+    .chip { background: var(--pale-blue); color: var(--navy); border-radius: 7px; padding: 4px 8px; font-size: 11px; font-weight: 800; }
+    .resource h3 { color: var(--navy); font-size: 17px; line-height: 1.3; margin: 0; }
+    .resource p { color: var(--muted); font-size: 14px; margin: 10px 0 18px; }
+    .resource a {
+      margin-top: auto; display: inline-flex; justify-content: center; text-align: center;
+      background: var(--navy); color: white; border-radius: 10px; padding: 10px 12px;
+      text-decoration: none; font-weight: 800; font-size: 13px;
+    }
+    .resource a:hover { background: var(--blue); }
+    .empty { display: none; background: white; border: 1px dashed var(--line); border-radius: 14px; padding: 25px; color: var(--muted); text-align: center; }
+    .tip { margin-top: 26px; background: #fff8e7; border: 1px solid #f3dfaa; padding: 15px; border-radius: 13px; color: #634b16; font-size: 13px; }
+    footer { background: #102e50; color: #dce8f5; padding: 22px 0; font-size: 13px; }
+    @media (max-width: 760px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .filters { grid-template-columns: 1fr; }
+      .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 480px) {
+      .resource-grid { grid-template-columns: 1fr; }
+      .resource { min-height: auto; }
+      .summary { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="index.html">🎓 BrightMinds Junior<small>Learn Today • Grow Tomorrow</small></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="#library">Learning Library</a>
+      <a id="whatsappNav" href="#" target="_blank" rel="noopener">Ask on WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Practice • Revise • Grow</span>
+    <h1>Learning Library</h1>
+    <p class="intro">Find worksheets, chapter notes and PDF resources by class and subject. Choose a class, select a subject, or search by topic.</p>
+  </div>
+</section>
+
+<main class="wrap" id="library">
+  <div class="filters" aria-label="Filter learning resources">
+    <div>
+      <label for="classFilter">Class / Grade</label>
+      <select id="classFilter">
+        <option value="all">All classes</option>
+        <option value="Nursery">Nursery</option>
+        <option value="LKG">LKG</option>
+        <option value="UKG">UKG</option>
+        <option value="Class 1">Class 1</option>
+        <option value="Class 2">Class 2</option>
+        <option value="Class 3">Class 3</option>
+        <option value="Class 4">Class 4</option>
+        <option value="Class 5">Class 5</option>
+        <option value="Class 6">Class 6</option>
+        <option value="Class 7">Class 7</option>
+        <option value="Class 8">Class 8</option>
+      </select>
+    </div>
+    <div>
+      <label for="subjectFilter">Subject</label>
+      <select id="subjectFilter">
+        <option value="all">All subjects</option>
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Science">Science</option>
+        <option value="EVS">EVS / Social Studies</option>
+        <option value="Computer">Computer</option>
+        <option value="Moral Values">Moral Values</option>
+        <option value="Communication">English Communication</option>
+      </select>
+    </div>
+    <div>
+      <label for="searchInput">Search resources</label>
+      <input id="searchInput" type="search" placeholder="e.g. fractions, vowels, plants">
+    </div>
+  </div>
+
+  <div class="summary">
+    <h2>Browse Resources</h2>
+    <span id="count" aria-live="polite">Showing resources</span>
+  </div>
+
+  <div class="resource-grid" id="resourceGrid">
+    <!--
+      ADD A RESOURCE:
+      1. Copy one complete <article class="resource"> ... </article> card.
+      2. Update data-class, data-subject, title, description and file link.
+      3. Keep data-class and data-subject values consistent with the dropdown options.
+      4. Use relative links like "resources/Class-3/Mathematics/fractions-practice.pdf".
+    -->
+
+    <article class="resource" data-class="Nursery" data-subject="English">
+      <div class="resource-icon">🔤</div>
+      <div class="chips"><span class="chip">Nursery</span><span class="chip">English</span><span class="chip">Worksheet</span></div>
+      <h3>Alphabet Tracing — Sample</h3>
+      <p>A starter card for letter recognition and pencil practice. Replace this with your own worksheet.</p>
+      <a href="resources/Nursery/English/alphabet-tracing.pdf">Open PDF</a>
+    </article>
+
+    <article class="resource" data-class="Class 1" data-subject="Mathematics">
+      <div class="resource-icon">🔢</div>
+      <div class="chips"><span class="chip">Class 1</span><span class="chip">Mathematics</span><span class="chip">Worksheet</span></div>
+      <h3>Number Practice — Sample</h3>
+      <p>A sample resource card for counting, number names and basic operations.</p>
+      <a href="resources/Class-1/Mathematics/number-practice.pdf">Open PDF</a>
+    </article>
+
+    <article class="resource" data-class="Class 3" data-subject="Science">
+      <div class="resource-icon">🌱</div>
+      <div class="chips"><span class="chip">Class 3</span><span class="chip">Science</span><span class="chip">Notes</span></div>
+      <h3>Plants Around Us — Sample Notes</h3>
+      <p>A sample notes card. Add a short, parent-friendly description of the chapter.</p>
+      <a href="resources/Class-3/Science/plants-around-us-notes.pdf">Open PDF</a>
+    </article>
+
+    <article class="resource" data-class="Class 5" data-subject="English">
+      <div class="resource-icon">📖</div>
+      <div class="chips"><span class="chip">Class 5</span><span class="chip">English</span><span class="chip">Notes</span></div>
+      <h3>Grammar Revision — Sample</h3>
+      <p>Use this card for grammar notes, examples, revision exercises or answer keys.</p>
+      <a href="resources/Class-5/English/grammar-revision.pdf">Open PDF</a>
+    </article>
+
+    <article class="resource" data-class="Class 6" data-subject="Mathematics">
+      <div class="resource-icon">➗</div>
+      <div class="chips"><span class="chip">Class 6</span><span class="chip">Mathematics</span><span class="chip">Practice</span></div>
+      <h3>Fractions Practice — Sample</h3>
+      <p>A sample card for worked examples and extra practice questions.</p>
+      <a href="resources/Class-6/Mathematics/fractions-practice.pdf">Open PDF</a>
+    </article>
+
+    <article class="resource" data-class="Class 8" data-subject="Science">
+      <div class="resource-icon">🧪</div>
+      <div class="chips"><span class="chip">Class 8</span><span class="chip">Science</span><span class="chip">Premium</span></div>
+      <h3>Science Chapter Pack — Sample</h3>
+      <p>Use for a premium pack description. Connect only to a real, authorized purchase page or file.</p>
+      <a href="contact.html?resource=science-chapter-pack">Ask about this PDF</a>
+    </article>
+  </div>
+
+  <div class="empty" id="emptyState">No resources match those filters yet. Try another class or subject, or clear the search.</div>
+
+  <div class="tip"><strong>Website owner tip:</strong> These are sample cards and the example PDF files are not included. Add your own PDFs in the matching folders and update each link before sharing this page publicly.</div>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> BrightMinds Junior · Learning resources for young minds.</div>
+</footer>
+
+<script>
+  // Update the number below to your WhatsApp number: country code + number, digits only.
+  const WHATSAPP_NUMBER = "917869147295";
+  const whatsappMessage = "Hello BrightMinds Junior! I have a question about your worksheets and study PDFs.";
+  document.getElementById("whatsappNav").href =
+    "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(whatsappMessage);
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const classFilter = document.getElementById("classFilter");
+  const subjectFilter = document.getElementById("subjectFilter");
+  const searchInput = document.getElementById("searchInput");
+  const cards = Array.from(document.querySelectorAll(".resource"));
+  const count = document.getElementById("count");
+  const emptyState = document.getElementById("emptyState");
+
+  function filterResources() {
+    const chosenClass = classFilter.value;
+    const chosenSubject = subjectFilter.value;
+    const query = searchInput.value.trim().toLowerCase();
+    let visible = 0;
+
+    cards.forEach(card => {
+      const classMatches = chosenClass === "all" || card.dataset.class === chosenClass;
+      const subjectMatches = chosenSubject === "all" || card.dataset.subject === chosenSubject;
+      const textMatches = card.textContent.toLowerCase().includes(query);
+      const show = classMatches && subjectMatches && textMatches;
+      card.hidden = !show;
+      if (show) visible++;
+    });
+
+    count.textContent = "Showing " + visible + " of " + cards.length + " resources";
+    emptyState.style.display = visible === 0 ? "block" : "none";
+  }
+
+  classFilter.addEventListener("change", filterResources);
+  subjectFilter.addEventListener("change", filterResources);
+  searchInput.addEventListener("input", filterResources);
+  filterResources();
+</script>
+</body>
+</html>
